@@ -17,6 +17,8 @@ protected:
 	Tratador* tratador=nullptr;
 
 public:
+	Animais(double preco, Habitat habitat, bool ameacado);
+	Animais();
 	void setPreco(double preco);
 	double getPreco();
 	void setAmeacado(bool ameacado);

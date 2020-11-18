@@ -1,4 +1,5 @@
 #include "animais.hpp"
+#include "estoque.hpp"
 #include <iostream>
 
 int main(){
@@ -35,6 +36,10 @@ int main(){
 	tratadorteste.setNivel(vermelho);
 	std::cout<<animalteste.getTratador()->getNome()<<std::endl;
 	std::cout<<animalteste.getTratador()->getNivel()<<std::endl;
+
+	Estoque estoqueteste;
+	estoqueteste.criarAnimal();
+	estoqueteste.listarAnimais();
 
 
 return 0;

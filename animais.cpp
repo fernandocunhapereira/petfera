@@ -1,6 +1,11 @@
 #include "animais.hpp"
 #include <iostream>
 
+Animais::Animais(double preco, Habitat habitat, bool ameacado):preco(preco),habitat(habitat),ameacado(ameacado){}
+
+Animais::Animais(){	
+}
+
 void Animais::setPreco(double preco){
 	this->preco=preco;
 }
