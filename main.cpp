@@ -17,10 +17,8 @@ int main(){
 	animalteste.setHabitat(domestico);
 	std::cout<<animalteste.getHabitat()<<std::endl;
 
-	Tratador tratadorteste;
+	Tratador tratadorteste("tratador joao",azul);
 	
-	tratadorteste.setNome("joao");
-	tratadorteste.setNivel(azul);
 	std::cout<<tratadorteste.getNome()<<std::endl;
 	std::cout<<tratadorteste.getNivel()<<std::endl;
 
@@ -28,19 +26,35 @@ int main(){
 	
 	std::cout<<animalteste.getTratador()->getNome()<<std::endl;
 	std::cout<<animalteste.getTratador()->getNivel()<<std::endl;
-	tratadorteste.setNome("maria");
+	tratadorteste.setNome("tratador maria");
 	tratadorteste.setNivel(verde);
 	std::cout<<animalteste.getTratador()->getNome()<<std::endl;
 	std::cout<<animalteste.getTratador()->getNivel()<<std::endl;
-	tratadorteste.setNome("andre");
+	tratadorteste.setNome("tratador andre");
 	tratadorteste.setNivel(vermelho);
 	std::cout<<animalteste.getTratador()->getNome()<<std::endl;
 	std::cout<<animalteste.getTratador()->getNivel()<<std::endl;
+
+	Veterinario veterinarioteste("vet alex","crmv123");
+
+	animalteste.setVeterinario(veterinarioteste);
+	
+	std::cout<<animalteste.getVeterinario()->getNome()<<std::endl;
+	std::cout<<animalteste.getVeterinario()->getCrmv()<<std::endl;
+	veterinarioteste.setNome("vet carlos");
+	veterinarioteste.setCrmv("abcde");
+	std::cout<<animalteste.getVeterinario()->getNome()<<std::endl;
+	std::cout<<animalteste.getVeterinario()->getCrmv()<<std::endl;
+	veterinarioteste.setNome("vet ana");
+	veterinarioteste.setCrmv("123xcv4");
+	std::cout<<animalteste.getVeterinario()->getNome()<<std::endl;
+	std::cout<<animalteste.getVeterinario()->getCrmv()<<std::endl;
 
 	Estoque estoqueteste;
 	estoqueteste.criarAnimal();
 	estoqueteste.listarAnimais();
 
+	std::cout<<animalteste<<std::endl;
 
 return 0;
 }

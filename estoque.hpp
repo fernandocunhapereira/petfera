@@ -1,6 +1,4 @@
-#ifndef ESTOQUE
-#define ESTOQUE
-
+#pragma once
 #include "animais.hpp"
 #include <iostream>
 #include <vector>
@@ -12,7 +10,4 @@ public:
 	bool criarAnimal();
 	bool adicionarAnimal(Animais* animal);
 	void listarAnimais();
-	
 };
-
-#endif

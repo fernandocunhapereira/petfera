@@ -1,22 +1,21 @@
-#ifndef TRATADOR
-#define TRATADOR
+#pragma once
 #include <iostream>
 
+using std::string;
+
 enum Nivel{
-	verde,
-	azul,
-	vermelho
+    verde, azul, vermelho
 };
 
 class Tratador{
 private:
-	std::string nome;
-	Nivel nivel;
+    string nome;
+    Nivel nivel; 
 public:
-	void setNome(std::string nome);
-	std::string getNome();
-	void setNivel(Nivel nivel);
-	Nivel getNivel();
+    Tratador(string nome, Nivel nivel);
+    ~Tratador();
+    string getNome();
+    void setNome(string nome);
+    Nivel getNivel();
+    void setNivel(Nivel nivel);
 };
-
-#endif
