@@ -22,6 +22,7 @@ int main(){
 	std::cout<<tratadorteste.getNivel()<<std::endl;
 	tratadorteste.setNome("tratador maria");
 	tratadorteste.setNivel(verde);
+	std::cout<<std::endl;
 
 	animalteste.setTratador(tratadorteste); //atribuindo tratador a animal
 
@@ -33,6 +34,7 @@ int main(){
 	std::cout<<veterinarioteste.getCrmv()<<std::endl;
 	veterinarioteste.setNome("vet carlos");
 	veterinarioteste.setCrmv("abcde");
+	std::cout<<std::endl;
 	
 	animalteste.setVeterinario(veterinarioteste); //atribuindo veterinario a animal
 
