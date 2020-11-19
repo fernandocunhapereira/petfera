@@ -4,55 +4,42 @@
 
 int main(){
 	
-	Animais animalteste; 
+	Animais animalteste(1.15,exotico,false); //criando animal 
 
-	animalteste.setPreco(3.15);
-	animalteste.setAmeacado(false);
-	std::cout<<animalteste.getPreco()<<std::endl;
+	std::cout<<"teste do animal"<<std::endl;
+	std::cout<<animalteste.getPreco()<<std::endl; //manipulando animal
 	std::cout<<animalteste.getAmeacado()<<std::endl;
+	std::cout<<animalteste.getHabitat()<<std::endl;
 	animalteste.setAmeacado(true);
-	std::cout<<animalteste.getAmeacado()<<std::endl;
-	animalteste.setHabitat(exotico);
-	std::cout<<animalteste.getHabitat()<<std::endl;
-	animalteste.setHabitat(domestico);
-	std::cout<<animalteste.getHabitat()<<std::endl;
+	animalteste.setHabitat(nativo);
+	animalteste.setPreco(5.78);
+	std::cout<<std::endl;
 
-	Tratador tratadorteste("tratador joao",azul);
+	Tratador tratadorteste("tratador joao",azul); //criando tratador
 	
-	std::cout<<tratadorteste.getNome()<<std::endl;
+	std::cout<<"teste do tratador"<<std::endl;
+	std::cout<<tratadorteste.getNome()<<std::endl; //manipulando tratador
 	std::cout<<tratadorteste.getNivel()<<std::endl;
-
-	animalteste.setTratador(tratadorteste);
-	
-	std::cout<<animalteste.getTratador()->getNome()<<std::endl;
-	std::cout<<animalteste.getTratador()->getNivel()<<std::endl;
 	tratadorteste.setNome("tratador maria");
 	tratadorteste.setNivel(verde);
-	std::cout<<animalteste.getTratador()->getNome()<<std::endl;
-	std::cout<<animalteste.getTratador()->getNivel()<<std::endl;
-	tratadorteste.setNome("tratador andre");
-	tratadorteste.setNivel(vermelho);
-	std::cout<<animalteste.getTratador()->getNome()<<std::endl;
-	std::cout<<animalteste.getTratador()->getNivel()<<std::endl;
 
-	Veterinario veterinarioteste("vet alex","crmv123");
+	animalteste.setTratador(tratadorteste); //atribuindo tratador a animal
 
-	animalteste.setVeterinario(veterinarioteste);
+
+	Veterinario veterinarioteste("vet alex","crmv123"); //criando veterinario
 	
-	std::cout<<animalteste.getVeterinario()->getNome()<<std::endl;
-	std::cout<<animalteste.getVeterinario()->getCrmv()<<std::endl;
+	std::cout<<"teste do tratador"<<std::endl;
+	std::cout<<veterinarioteste.getNome()<<std::endl;;
+	std::cout<<veterinarioteste.getCrmv()<<std::endl;
 	veterinarioteste.setNome("vet carlos");
 	veterinarioteste.setCrmv("abcde");
-	std::cout<<animalteste.getVeterinario()->getNome()<<std::endl;
-	std::cout<<animalteste.getVeterinario()->getCrmv()<<std::endl;
-	veterinarioteste.setNome("vet ana");
-	veterinarioteste.setCrmv("123xcv4");
-	std::cout<<animalteste.getVeterinario()->getNome()<<std::endl;
-	std::cout<<animalteste.getVeterinario()->getCrmv()<<std::endl;
+	
+	animalteste.setVeterinario(veterinarioteste); //atribuindo veterinario a animal
 
-	Estoque estoqueteste;
-	estoqueteste.criarAnimal();
-	estoqueteste.listarAnimais();
+
+	// Estoque estoqueteste;
+	// estoqueteste.criarAnimal();
+	// estoqueteste.listarAnimais();
 
 	std::cout<<animalteste<<std::endl;
 
